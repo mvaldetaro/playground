@@ -1,0 +1,42 @@
+
+div.touts .tout {
+float: left;
+padding-top: 25px;
+padding-bottom: 50px;
+margin-bottom: 50px;
+width: 270px;
+text-align: center;
+background-color: #EF9202;
+cursor: pointer;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+/* CONTACT */
+div.touts .tout#contact_us {
+margin-left: 45px;
+background: #EF9202;
+}
+
+.tout#contact_us div.icon {
+width: 270px;
+height: 160px;
+background-size: 1890px 1760px;
+background-image: url('../images/contact_icon.png');
+background-repeat: no-repeat;
+}
+
+/* Distributer */
+div.touts .tout#become_a_distributor {
+margin-left: 45px;
+background: #EF9202;
+}
+
+.tout#become_a_distributor div.icon {
+width: 270px;
+height: 160px;
+background-size: 1890px 800px;
+background-image: url('../images/truck_icon.png');
+background-repeat: no-repeat;
+}

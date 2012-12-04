@@ -1,0 +1,96 @@
+@import "bourbon/bourbon";
+* {margin: 0; padding: 0;}
+body { background:#e9edee; margin: 50px auto; width: 600px; -webkit-backface-visibility: hidden; }
+
+
+#btn2 {
+  width:103px;
+  height: 35px;
+  background-color: #ccc;
+
+  -webkit-perspective: 200;
+  -webkit-perspective-origin: 50% 0;
+
+  .inside {
+    height: 35px;
+    padding: 8px 10px 0px 4px;
+    @include transition (box-shadow .5s ease-in-out);
+    @include box-sizing(border-box);
+  }
+  #cover {
+    position: absolute;
+    top: 0;
+    width: 103px;
+    height: 35px;
+    background-color: red;
+
+    -webkit-transform-origin: bottom;
+    -webkit-transform-style: preserve-3d;
+
+    @include transition (box-shadow .5s ease-in-out);
+    -webkit-transition: -webkit-transform .5s ease;
+    -webkit-transform: translateY(0) rotateX(0);
+    
+    -moz-transition: -moz-transform .5s ease;
+    -moz-transform: translate(0);
+
+    .face {
+      width: 103px; 
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: green;
+      -webkit-transform-origin: top;
+      -webkit-transform: rotateX(-90deg);
+      -webkit-transition: background-color .5s ease-out;
+      
+      -moz-transform-origin: top;
+      -moz-transform: rotateX(-90deg);
+      -moz-transition: background-color .5s ease-out;
+      .recto {
+        background-color: green;
+        display: block;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: background-color .5s ease-in-out;
+        -moz-transition: background-color .5s ease-in-out;
+      }
+      &.back {
+        -webkit-transform: rotateX(-180deg) translateZ(5px);
+        background-color: brown;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+
+  &:hover {
+    .inside { 
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px white; 
+    }
+    #cover {
+      -webkit-transform: translateY(3px) rotateX(-120deg);
+      -moz-transform: translate(0px, 35px);
+    }
+    #cover {
+      -webkit-transform: translateY(5px) rotateX(-120deg);
+      -moz-transform: translate(0px, 35px);
+    }
+  }
+  // #shadow {
+  //   display: block;
+  //   height: 25px;
+  //   position: absolute;
+  //   top: 32px;
+  //   -webkit-transition: height 1s ease, opacity .5s ease;
+  //   -moz-transition: height 1s ease, opacity .5s ease;
+  //   opacity: 0;
+  //   img { width: 100%; height: 100%; float: left; }
+  // }
+}
+  
+    

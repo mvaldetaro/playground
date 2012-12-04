@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #e9edee;
+  margin: 50px auto;
+  width: 600px;
+  -webkit-backface-visibility: hidden; }
+
+#btn2 {
+  width: 103px;
+  height: 35px;
+  background-color: #ccc;
+  -webkit-perspective: 200;
+  -webkit-perspective-origin: 50% 0; }
+  #btn2 .inside {
+    height: 35px;
+    padding: 8px 10px 0px 4px;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -o-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  #btn2 #cover {
+    position: absolute;
+    top: 0;
+    width: 103px;
+    height: 35px;
+    background-color: red;
+    -webkit-transform-origin: bottom;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -o-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease;
+    -webkit-transform: translateY(0) rotateX(0);
+    -moz-transition: -moz-transform .5s ease;
+    -moz-transform: translate(0); }
+    #btn2 #cover .face {
+      width: 103px;
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: green;
+      -webkit-transform-origin: top;
+      -webkit-transform: rotateX(-90deg);
+      -webkit-transition: background-color .5s ease-out;
+      -moz-transform-origin: top;
+      -moz-transform: rotateX(-90deg);
+      -moz-transition: background-color .5s ease-out; }
+      #btn2 #cover .face .recto {
+        background-color: green;
+        display: block;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: background-color .5s ease-in-out;
+        -moz-transition: background-color .5s ease-in-out; }
+      #btn2 #cover .face.back {
+        -webkit-transform: rotateX(-180deg) translateZ(5px);
+        background-color: brown;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        height: 100%; }
+  #btn2:hover .inside {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px white; }
+  #btn2:hover #cover {
+    -webkit-transform: translateY(3px) rotateX(-120deg);
+    -moz-transform: translate(0px, 35px); }
+  #btn2:hover #cover {
+    -webkit-transform: translateY(5px) rotateX(-120deg);
+    -moz-transform: translate(0px, 35px); }

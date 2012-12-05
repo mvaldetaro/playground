@@ -1,0 +1,9 @@
+html {
+  background: url(../img/bg.png) repeat-x #cac6c0; }
+
+header .logo {
+  display: block;
+  width: 82px;
+  height: 55px;
+  text-indent: -9999px;
+  background: url(../img/logo.png) no-repeat; }

@@ -1,14 +1,83 @@
+@-webkit-keyframes shakeme {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg); }
+
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg); }
+
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg); }
+
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg); }
+
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg); } }
+
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  background: #e9edee;
-  margin: 50px auto;
-  width: 600px;
+  margin: 0 auto;
+  background: url(../img/bg.png) repeat-x #cac6c0;
   -webkit-backface-visibility: hidden; }
 
+#page-wrapper {
+  position: relative; }
+
+.shelf {
+  display: block;
+  width: 386px;
+  height: 300px;
+  background: url(../img/shelf.png) no-repeat bottom center;
+  position: relative;
+  top: 50%; }
+
+.slide {
+  position: absolute;
+  top: 20%;
+  left: 50%; }
+  .slide .slider {
+    display: block;
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    -webkit-transform: perspective(185px) rotateX(45deg);
+    -webkit-perspective-origin: 50% 50%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  .slide:hover
+  .slider {
+    height: 200px; }
+
 #btn2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  z-index: 0;
+  cursor: pointer;
   width: 103px;
   height: 35px;
   background-color: #ccc;
@@ -24,13 +93,21 @@ body {
     transition: box-shadow 0.5s ease-in-out;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    background: url(../img/debut_dark.png) no-repeat;
+    overflow: hidden; }
+    #btn2 .inside .facy {
+      display: block;
+      width: 89px;
+      height: 92px;
+      margin-top: -10px;
+      background: url(../img/facy.png) no-repeat 0 -20px; }
   #btn2 #cover {
     position: absolute;
     top: 0;
     width: 103px;
     height: 35px;
-    background-color: red;
+    background: url(../img/billie_holiday.png) repeat;
     -webkit-transform-origin: bottom;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: box-shadow 0.5s ease-in-out;
@@ -48,7 +125,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: green;
+      background: url(../img/billie_holiday.png) repeat;
       -webkit-transform-origin: top;
       -webkit-transform: rotateX(-90deg);
       -webkit-transition: background-color .5s ease-out;
@@ -56,7 +133,7 @@ body {
       -moz-transform: rotateX(-90deg);
       -moz-transition: background-color .5s ease-out; }
       #btn2 #cover .face .recto {
-        background-color: green;
+        background: url(../img/otis_redding.png) repeat;
         display: block;
         width: 100%;
         height: 100%;
@@ -70,10 +147,95 @@ body {
         width: 100%;
         height: 100%; }
   #btn2:hover .inside {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px white; }
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.4); }
+    #btn2:hover .inside .facy {
+      -webkit-animation-name: shakeme;
+      -webkit-animation-duration: 0.8s;
+      -webkit-transform-origin: 50% 50%;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear; }
   #btn2:hover #cover {
     -webkit-transform: translateY(3px) rotateX(-120deg);
     -moz-transform: translate(0px, 35px); }
-  #btn2:hover #cover {
-    -webkit-transform: translateY(5px) rotateX(-120deg);
+
+.folder {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 160px;
+  height: 120px;
+  margin: -100px 0 0 -60px; }
+  .folder div {
+    width: 150px;
+    height: 115px;
+    background-color: #93bad8;
+    /* Enabling 3d space for the transforms */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /* Enabling a smooth animated transition */
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    /* Disable text seleltion on the folder */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -75px; }
+  .folder:hover .front {
+    -webkit-transform: translateY(3px) rotateX(-120deg);
     -moz-transform: translate(0px, 35px); }
+  .folder .front {
+    border-radius: 5px 5px 0 0;
+    -moz-transform: rotateX(-30deg);
+    -webkit-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: linear, top, #93bad8 0%, #6c9dc0 85%, #628faf 100%;
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.35) inset;
+    z-index: 10;
+    font: bold 26px sans-serif;
+    color: #5A88A9;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+    line-height: 115px; }
+  .folder .back {
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: linear, top, #93bad8 0%, #89afcc 10%, #5985a5 60%;
+    border-radius: 0 5px 0 0;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.15); }
+    .folder .back:before {
+      content: "";
+      width: 60px;
+      height: 10px;
+      border-radius: 4px 4px 0 0;
+      background-color: #93bad8;
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.15); }
+    .folder .back:after {
+      content: ""''"";
+      width: 100%;
+      height: 4px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      box-shadow: 0 4px 8px #333; }
+  .folder.open .front {
+    -moz-transform: rotateX(-50deg);
+    -webkit-transform: rotateX(-50deg);
+    transform: rotateX(-50deg); }

@@ -86,11 +86,11 @@ body {
   #btn2 .inside {
     height: 35px;
     padding: 8px 10px 0px 4px;
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    -moz-transition: box-shadow 0.5s ease-in-out;
-    -ms-transition: box-shadow 0.5s ease-in-out;
-    -o-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.1s ease-in-out;
+    -moz-transition: box-shadow 0.1s ease-in-out;
+    -ms-transition: box-shadow 0.1s ease-in-out;
+    -o-transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -147,7 +147,7 @@ body {
         width: 100%;
         height: 100%; }
   #btn2:hover .inside {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.4); }
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.5); }
     #btn2:hover .inside .facy {
       -webkit-animation-name: shakeme;
       -webkit-animation-duration: 0.8s;

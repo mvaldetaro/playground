@@ -1,12 +1,9 @@
-@import "bourbon";
-
-
-// Misc
-html {
-  background: url(../img/bg.png) repeat-x #cac6c0;
+body {
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  background: url(assets/img/bg.png) repeat-x #dbd8d4;
 }
-
-
+a { outline: none; }
 // Header 
 header {
 
@@ -15,6 +12,67 @@ header {
     width: 82px;
     height: 55px;
     text-indent: -9999px;
-    background: url(../img/logo.png) no-repeat;
+    background: url(assets/img/logo.png) no-repeat;
   }
 }
+
+
+// Demo Pages
+section[role="demos"] {
+
+  & > section .box {
+    position: relative;
+    display: block;
+    width: 220px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, .5);
+    @include border-radius(5px);
+    @include transition(all .5s ease-in-out);
+    .box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:hover {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          width: 195px;
+          height: 165px;
+          @include box-shadow(inset 0px 0px 8px 1px rgba(0,0,0,0.1));
+        }
+      }
+    }
+    img {
+      @include box-sizing(border-box);
+      width: 195px;
+      height: 165px;
+      margin: 12px 0 0 12px;
+    }
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {}
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {}
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {}
+
+
+
+
+

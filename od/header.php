@@ -10,8 +10,10 @@
   <title>OD</title>
 
   <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/skeleton.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="init.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/lightbox.css" type="text/css" />
 
   <!-- IE Related -->
   <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -19,11 +21,13 @@
 
   <!-- jQuery -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/custom.js"></script>
 </head>
 <body>
 
   <header>
-    <h1 class="logo">OD</h1>
+    <!-- <h1 class="logo">OD</h1> -->
   </header>
 
 

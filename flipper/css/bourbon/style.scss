@@ -83,7 +83,7 @@ body {
   .inside {
     height: 35px;
     padding: 8px 10px 0px 4px;
-    @include transition (box-shadow .5s ease-in-out);
+    @include transition (box-shadow .1s ease-in-out);
     @include box-sizing(border-box);
     background: url(../img/debut_dark.png) no-repeat;
     overflow: hidden;
@@ -149,7 +149,7 @@ body {
 
   &:hover {
     .inside { 
-      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(255, 255, 255, .4); 
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(255, 255, 255, .5); 
       .facy {
         @include shakeme;
       }

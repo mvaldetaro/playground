@@ -1,0 +1,4 @@
+@mixin perspective($property: none) {
+//  none | <transform-function>
+  @include prefixer(perspective, $property, webkit, moz, ms, o);
+}
